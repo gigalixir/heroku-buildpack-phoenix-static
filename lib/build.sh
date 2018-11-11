@@ -128,6 +128,7 @@ install_and_cache_deps() {
 }
 
 install_npm_deps() {
+  echo "Installing npm deps"
   # pruning causes problems with elm 0.19. binwrap-install not found.
   # npm prune --verbose | indent
   npm install --verbose --unsafe-perm --userconfig $build_dir/npmrc 2>&1 | indent
